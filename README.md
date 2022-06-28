@@ -48,3 +48,36 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+Steps for running via kubectl
+
+# Step 1:
+# This is your Docker ID/path
+dockerpath=mohammadahtasham786/microservices
+
+# Step 2
+# Run the Docker Hub container with kubernetes
+kubectl run ml-microservice --image=$dockerpath --port=80
+
+# Step 3:
+# List kubernetes pods
+kubectl get pods
+
+# Step 4:
+# Forward the container port to a host
+kubectl port-forward ml-microservice 8000:80
+
+
+## Directory and file structure
+
+- `.circleci/config.yml` CircleCI configuration file
+- `model_data` model data that was trained and given with project rubric
+- `output_txt_files` Sample Output from Docker and Kubernetes is saved there
+- `requirements.txt` Python requirements file
+- `app.py` API for predicting housing prices
+- `make_prediction.sh` file used for making predictions
+- `run_docker.sh` runs docker container
+- `run_kubernetes.sh` deploys docker container on Kubernetes cluster
+- `upload_docker.sh` uploads docker image to dockerhub repository
+- `Makefile` contains make target for the project. 
+- `Dockerfile` Dockerfile for the project to containerize the app
