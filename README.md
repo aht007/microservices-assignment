@@ -1,4 +1,4 @@
-<!-- [![CircleCI](https://circleci.com/gh/aht007/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs) -->
+<!-- [![CircleCI](https://circleci.com/gh/aht007/microservices-assignment.svg?style=svg)](https://circleci.com/gh/aht007/microservices-assignment) -->
 
 ## Project Overview
 
